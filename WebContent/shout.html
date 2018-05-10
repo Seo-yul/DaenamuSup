@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Open+Sans|Roboto">
+	<link rel="stylesheet" href="css/seoyul_main.css?v=1" type="text/css" media="screen,projection" />
+	<link rel="stylesheet" href="css/frame.css?v=1">
+	<script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+	<script src="js/ie10-viewport-bug-workaround.js"></script>
+	<script src="js/seoyul_main.js?v=1"></script>
+	<script src="js/frame.js?v=1"></script>
+	<title>대나무숲에 외치기</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="header">
+			<nav class="navbar navbar-inverse navbar-static-top">
+				<div class="navbar-header">
+
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topbar" aria-expanded="false"
+					 aria-controls="navbar">
+						<span class="sr-only"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+
+					<a class="navbar-brand" href="main.jsp" style="color: #f3f3f3; text-decoration: none;">
+						<strong>대나무숲</strong>
+					</a>
+
+				</div>
+
+				<div role="tabpanel">
+
+					<div id="topbar" class="navbar-collapse collapse pull-right">
+
+						<!-- Nav tabs -->
+						<ul class="nav nav-pills pull-right" role="tablist">
+
+							<li role="presentation" class="active" style="margin-left: 10px">
+								<a href="main.jsp">Home</a>
+							</li>
+
+							<li role="presentation">
+								<button disabled class="logout btn btn-primary btn-lg btn-block mdl-button mdl-button--raised" id="quickstart-sign-in" name="signin">로그아웃</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<!-- Tab panes -->
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane fade in active">
+				<div class="jumbotron send-msg" style="padding: 10px; background-color: #3c763d;">
+					<form action="sqlShoutInsert.jsp" method="post">
+
+
+						<textarea name="userSendmsg" class="send-msg-in" id="txtDetail" rows="10"  cols="30" maxlength="495" style="background-color: #f3f3f3bb; margin: 1px; color: #000000; overflow: auto;"></textarea>
+
+						<p>
+							<input type="submit" class="btn btn-lg btn-success " role="button" style="padding: 8px; margin-top: 10px" value="작성하기">
+						</p>
+
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer">
+			
+            <p>정보통신망의 안정적 운영을 방해할 목적으로 대량의 신호 또는 데이터를 보내거나 부정한 명령을 처리하도록 하는 등의 방법으로 정보통신망에 장애를 발생하게 하였다면 정보통신망이용촉진및정보보호에관한법률 제71조제10호 및 제48조제3항을 적용하여 형사처벌이 가능합니다.
+            <br>kakao @yul2</p>
+		</footer>
+
+	</div>
+	<!-- /container -->
+</body>
+
+</html>
